@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Night Ticket Booking</title>
+  </head>
+  <body>
+    <h1>Movie Night Ticket Booking</h1>
+    <div
+      style="
+        background-color: rgba(175, 228, 228, 0.647);
+        font-weight: 500;
+        width: 80%;
+        text-align: left;
+        padding: 25px;
+        border: 5px;
+        border-radius: 3%;
+      "
+    >
+      <form>
+        <label style="font-size: larger" for="fname">First Name:</label><br />
+        <input
+          style="width: 70%"
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="Amal"
+        /><br /><br />
+        <label style="font-size: larger" for="lname">Last Name:</label><br />
+        <input
+          style="width: 70%"
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="Perera"
+        /><br /><br />
+        <label style="font-size: larger" for="email">Email:</label><br />
+        <input
+          style="width: 70%"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="amalperera1990@gmail.com"
+        /><br /><br />
+        <label style="font-size: larger">Movies :</label><br />
+        <select id="Movie" name="Movie">
+          <option value="The_Lost_City">The Lost City</option>
+          <option value="Midnigit_Mystery">Midnight Mystery</option>
+          <option value="Future_world">Future World</option></select
+        ><br /><br />
+        <label style="font-size: larger" for="date">Date :</label><br />
+        <input type="date" id="date" /><br /><br />
+        <label style="font-size: larger">Number Of Tickets:</label><br />
+        <input type="number" min="1" placeholder="1" /><br /><br />
+        <label style="font-size: larger">Seat Type:</label><br />
+        <input type="radio" id="Regular" name="seat_type" value="Regular" />
+        <label for="Regular">Regular</label>
+        <input type="radio" id="Premium" name="seat_type" value="Premium" />
+        <label>Premium</label><br /><br />
+        <label style="font-size: larger">Snacks:</label><br />
+        <input type="checkbox" name="popcorn" value="popcorn" id="popcorn" />
+        <label for="popcorn">Popcorn</label>
+        <input
+          type="checkbox"
+          name="Soft_Drink"
+          value="Soft_Drink"
+          id="Soft_Drink"
+        />
+        <label for="Soft_Drink">Soft Drink</label>
+        <input type="checkbox" name="Nachos" value="Nachos" id="Nachos" />
+        <label for="Nachos">Nachos</label><br /><br />
+        <input type="button" value="Submit" />
+        <input type="reset" value="Reset" />
+      </form>
+    </div>
+  </body>
+</html>
