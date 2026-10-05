@@ -55,19 +55,29 @@
         </tr>
       </table>
     </div>
-    <div style="text-align: center; padding: 15px;">
-        <input type="button" value="Shope Name" name="button1">
-        <input type="button" value="Check Budget" name="button2">
-        <input type="button" value="Calculate Final Price" name="button3">
+    <div style="text-align: center; padding: 15px">
+      <input type="button" value="Shope Name" name="button1" onclick="Shop_details()"/>
+      <input type="button" value="Check Budget" name="button2" onclick="check_budget()"/>
+      <input type="button" value="Calculate Final Price" name="button3" />
     </div>
     <script>
-        function Shop_details(){
-            alert("Shope Name: ElectroMart \n",
-                "Minimum purchase amount : 1500 \n",
-                "special Discounts \n"  
-            )
-
+      function Shop_details() {
+        alert(
+          "Shope Name: ElectroMart \n",
+          "Minimum purchase amount : 1500 \n",
+          "special Discounts :Available \n",
+        );
+      }
+    </script>
+    <script>
+        function check_budget(){
+        var budget = prompt("Enter Your total budget?")
+        if (budget >= 1500){
+            alert("Your budget is sufficient to purchase from ElectroMart.")
+        }else{
+            alert("Your budget is below the minimum required amount")
         }
+      }
     </script>
   </body>
 </html>
