@@ -56,27 +56,71 @@
       </table>
     </div>
     <div style="text-align: center; padding: 15px">
-      <input type="button" value="Shope Name" name="button1" onclick="Shop_details()"/>
-      <input type="button" value="Check Budget" name="button2" onclick="check_budget()"/>
-      <input type="button" value="Calculate Final Price" name="button3" />
+      <input
+        type="button"
+        value="Shope Name"
+        name="button1"
+        onclick="Shop_details()"
+      />
+      <input
+        type="button"
+        value="Check Budget"
+        name="button2"
+        onclick="check_budget()"
+      />
+      <input
+        type="button"
+        value="Calculate Final Price"
+        name="button3"
+        onclick="calculatefinalprice"
+      />
     </div>
     <script>
       function Shop_details() {
         alert(
-          "Shope Name: ElectroMart \n",
-          "Minimum purchase amount : 1500 \n",
-          "special Discounts :Available \n",
+          "Shope Name: ElectroMart \n" +
+          "Minimum purchase amount : 1500 \n" +
+          "special Discounts :Available \n"
         );
       }
     </script>
     <script>
-        function check_budget(){
-        var budget = prompt("Enter Your total budget?")
-        if (budget >= 1500){
-            alert("Your budget is sufficient to purchase from ElectroMart.")
-        }else{
-            alert("Your budget is below the minimum required amount")
+      function check_budget() {
+        var budget = prompt("Enter Your total budget?");
+        if (budget >= 1500) {
+          alert("Your budget is sufficient to purchase from ElectroMart.");
+        } else {
+          alert("Your budget is below the minimum required amount");
         }
+      }
+    </script>
+    <script>
+      function calculatefinalprice() {
+        var discount;
+        if (amount >= 5000) {
+          discount = 15;
+        } else if (amount >= 3000) {
+          discount = 10;
+        } else if (amount >= 1500) {
+          discount = 5;
+        } else {
+          discount = 0;
+        }
+
+        var discountAmount = (amount * discount) / 100;
+        var finalprice = amount - discountAmount;
+
+        alert(
+          "Purchase Amount : Rs." +
+            amount +
+            "\n Disocunt : " +
+            discount +
+            "%" +
+            "\n Discount Amount : Rs." +
+            discountAmount +
+            "\nFinal Price : Rs." +
+            finalprice,
+        );
       }
     </script>
   </body>
