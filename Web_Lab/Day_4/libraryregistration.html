@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      form {
+        background-color: rgba(98, 212, 212, 0.703);
+        border-radius: 5%;
+      }
+      .section1 {
+        text-align: center;
+      }
+
+      form {
+        width: 500px;
+        margin: 0 auto;
+        padding: 30px;
+        border: 1px solid black;
+      }
+
+      .inputbox {
+        width: 500px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+
+      .lableSection {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section1">
+      <h1>Library Membership Register</h1>
+    </div>
+    <div>
+      <form>
+        <label>Full Name : </label><br />
+        <input type="text" class="inputbox" placeholder="Kasun Kalhara" /><br />
+        <lable>Student ID :</lable>
+        <input type="text" class="inputbox" placeholder="42355" />
+        <label>Email Address :</label>
+        <input
+          type="email"
+          class="inputbox"
+          placeholder="KasunKalhara2004@gmail.com"
+        />
+        <label>Year Of Study :</label>
+        <input type="radio" name="year" value="year1" /> <label>Year 1</label>
+        <input type="radio" name="year" value="year2" /><label>Year 2</label>
+        <input type="radio" name="year" value="year3" /><label>Year 3</label>
+        <input type="radio" name="year" value="year4" /><label>Year 4</label
+        ><br /><br />
+        <label class="lableSection">Membership Type:</label>
+        <input type="radio" name="membership" value="standard" /><label
+          >Standard</label
+        >
+        <input type="radio" name="membership" value="premium" /><label
+          >Premium</label
+        ><br /><br />
+        <input type="checkbox" name="update" />
+        <label>Receive Library Updates</label><br />
+        <input type="checkbox" name="update" />
+        <label>Agree to Library Rules</label><br /><br />
+
+        <input
+          type="button"
+          value="Create Member"
+          style="width: 250px; text-align: center"
+        />
+      </form>
+    </div>
+  </body>
+</html>
