@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h1>ElectroMart Electrical Shop</h1>
+    </div>
+    <div style="text-align: center">
+      <p>
+        Welcome to ElectroMart! Find quality electrical products at affordable
+        prices.
+      </p>
+    </div>
+    <div>
+      <table
+        border="1"
+        style="margin: auto; border-collapse: collapse; text-align: center"
+      >
+        <tr>
+          <th colspan="4" style="padding: 10px">
+            ElectroMart Product Information
+          </th>
+        </tr>
+        <tr>
+          <th style="padding: 10px">Category</th>
+          <th style="padding: 10px">products</th>
+          <th style="padding: 10px">Price</th>
+          <th style="padding: 10px">Offer</th>
+        </tr>
+        <tr>
+          <td rowspan="2" style="padding: 10px">Lighting</td>
+          <td style="padding: 10px">Led Bulb</td>
+          <td style="padding: 10px">Rs.1,200</td>
+          <td style="padding: 10px">5% Off</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px">LED Tube Light</td>
+          <td style="padding: 10px">Rs.2,500</td>
+          <td style="padding: 10px">10% Off</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px">Electrical</td>
+          <td style="padding: 10px">Extension Cord</td>
+          <td style="padding: 10px">Rs. 1,800</td>
+          <td style="padding: 10px">5% Off</td>
+        </tr>
+        <tr>
+          <td colspan="4" style="padding: 10px; text-align: center">
+            Minimum Purchase Amount: Rs.1,500
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div style="text-align: center; padding: 15px">
+      <input
+        type="button"
+        value="Shope Name"
+        name="button1"
+        onclick="Shop_details()"
+      />
+      <input
+        type="button"
+        value="Check Budget"
+        name="button2"
+        onclick="check_budget()"
+      />
+      <input
+        type="button"
+        value="Calculate Final Price"
+        name="button3"
+        onclick="calculatefinalprice"
+      />
+    </div>
+    <script>
+      function Shop_details() {
+        alert(
+          "Shope Name: ElectroMart \n" +
+          "Minimum purchase amount : 1500 \n" +
+          "special Discounts :Available \n"
+        );
+      }
+    </script>
+    <script>
+      function check_budget() {
+        var budget = prompt("Enter Your total budget?");
+        if (budget >= 1500) {
+          alert("Your budget is sufficient to purchase from ElectroMart.");
+        } else {
+          alert("Your budget is below the minimum required amount");
+        }
+      }
+    </script>
+    <script>
+      function calculatefinalprice() {
+        var discount;
+        if (amount >= 5000) {
+          discount = 15;
+        } else if (amount >= 3000) {
+          discount = 10;
+        } else if (amount >= 1500) {
+          discount = 5;
+        } else {
+          discount = 0;
+        }
+
+        var discountAmount = (amount * discount) / 100;
+        var finalprice = amount - discountAmount;
+
+        alert(
+          "Purchase Amount : Rs." +
+            amount +
+            "\n Disocunt : " +
+            discount +
+            "%" +
+            "\n Discount Amount : Rs." +
+            discountAmount +
+            "\nFinal Price : Rs." +
+            finalprice,
+        );
+      }
+    </script>
+  </body>
+</html>

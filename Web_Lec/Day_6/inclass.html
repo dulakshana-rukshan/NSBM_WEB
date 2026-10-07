@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity</title>
+
+    <style>
+      .inputbox {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 300px;
+      }
+
+      #result {
+        width: 700px;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div>
+
+      <form id="patientForm">
+
+        <fieldset style="width: 700px; margin-left: auto; margin-right: auto">
+
+          <legend>Patient Information</legend>
+
+          <label>Name :</label>
+          <input type="text" class="inputbox" id="name" />
+          <br />
+
+          <label>Address :</label>
+          <textarea style="width: 200px" id="address"></textarea>
+          <br />
+
+          <label>Birth Date :</label>
+          <input type="date" style="margin-top: 10px" id="bdate" />
+          <br />
+
+          <label>Age :</label>
+          <input type="number" min="1" class="inputbox" id="age" />
+          <br />
+
+          <label>Gender :</label>
+
+          <label>MALE</label>
+          <input type="radio" name="gender" value="male" id="male" />
+
+          <label>FEMALE</label>
+          <input type="radio" name="gender" value="female" id="female" />
+
+          <br /><br />
+
+          <label>Disease :</label>
+
+          <select id="disease" name="disease" required>
+            <option value="">Select</option>
+            <option value="Fever">Fever</option>
+            <option value="Diabetes">Diabetes</option>
+            <option value="Asthma">Asthma</option>
+            <option value="Heart Disease">Heart Disease</option>
+          </select>
+
+          <br />
+
+          <label>Email :</label>
+          <input type="email" class="inputbox" id="email" />
+          <br />
+
+          <label>PIN :</label>
+          <input type="password" class="inputbox" id="password" />
+          <br /><br />
+
+          <input type="submit" value="Submit" id="submit" />
+
+        </fieldset>
+
+      </form>
+
+      <div id="result"></div>
+
+    </div>
+
+
+    <script>
+      document.getElementById("patientForm").addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        var name = document.getElementById("name").value;
+        var address = document.getElementById("address").value;
+        var birthdate = document.getElementById("bdate").value;
+        var age = document.getElementById("age").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        var gender = "";
+
+        if (document.getElementById("male").checked) {
+          gender = "Male";
+        }
+        else if (document.getElementById("female").checked) {
+          gender = "Female";
+        }
+
+        var disease = document.getElementById("disease").value;
+
+
+        document.getElementById("result").innerHTML =
+          "<h2>Patient Details</h2>" +
+          "Name: " + name + "<br>" +
+          "Address: " + address + "<br>" +
+          "Birth Date: " + birthdate + "<br>" +
+          "Age: " + age + "<br>" +
+          "Gender: " + gender + "<br>" +
+          "Disease: " + disease + "<br>" +
+          "Email: " + email + "<br>" +
+          "PIN: " + password;
+
+      });
+    </script>
+
+  </body>
+</html>

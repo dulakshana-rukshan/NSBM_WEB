@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var isVIPmember = true;
+      var totalTicketValue = 550;
+
+      var is_eligibel = isVIPmember && totalTicketValue > 550;
+
+      document.write("Eligible for the Discount " + is_eligibel);
+    </script>
+    <script>
+      var checkmembership = prompt("Do You have any membership ?");
+      var totalticketprice = prompt("Enter The Total ?");
+
+      if ((checkmembership == true && totalticketprice > 500)) {
+        alert("Eligible fot the discount");
+      } else {
+        alert("Not eligible for the discount");
+      }
+    </script>
+  </body>
+</html>

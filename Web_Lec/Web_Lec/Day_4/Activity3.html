@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var tshirtprice = 200;
+      var jeansprice = 300;
+
+      var tshritcount = 30;
+      var jeanscount = 20;
+
+      var total_items = tshritcount + jeanscount;
+      var total_cost = tshirtprice * tshritcount + jeanscount * jeansprice;
+
+      alert("Total Revenue :" + total_cost + ", Total Items : " + total_items);
+
+      if (total_cost > 1000) {
+        alert("You have discounts");
+      }
+
+      alert("Total Revenue " + total_cost + " Total items " + total_items);
+    </script>
+  </body>
+</html>
