@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membership Application Form</title>
+  </head>
+  <body>
+    <style>
+      .inputbox {
+        width: 400px;
+      }
+      option {
+        text-align: center;
+      }
+
+      fieldset {
+        width: 550px;
+        background-color: rgba(240, 255, 255, 0.823);
+        border-radius: 10px;
+      }
+      legend {
+        margin: 15px;
+        font-weight: bolder;
+        font-size: large;
+      }
+      body {
+        background-color: rgba(245, 245, 220, 0.484);
+      }
+      div {
+        border: 1;
+        border-radius: 15px;
+        border-collapse: collapse;
+        width: 585px;
+        margin: auto;
+        background-color: rgba(5, 251, 251, 0.122);
+        padding-top: 10px;
+        padding-bottom: 25px;
+        padding-left: 35px;
+        padding-right: 35px;
+      }
+    </style>
+    <div>
+      <h1
+        style="
+          color: rgba(0, 0, 0, 0.693);
+          text-align: center;
+          font-family:
+            Impact, Haettenschweiler, &quot;Arial Narrow Bold&quot;, sans-serif;
+          font-size: 70px;
+        "
+      >
+        PulseFit Gym
+      </h1>
+      <h1
+        style="
+          color: rgba(0, 0, 0, 0.481);
+          text-align: center;
+          font-family:
+            &quot;Gill Sans&quot;, &quot;Gill Sans MT&quot;, Calibri,
+            &quot;Trebuchet MS&quot;, sans-serif;
+        "
+      >
+        Membership Application
+      </h1>
+      <form>
+        <fieldset>
+          <legend>Personal Details</legend>
+          <label>Full Name* :</label><br />
+          <input
+            type="text"
+            name="uname"
+            placeholder="Pathum Nissanka"
+            class="inputbox"
+            required
+          /><br /><br />
+          <label>Email* :</label><br />
+          <input
+            type="email"
+            name="email"
+            placeholder="pathumnissanka001@gmail.com"
+            class="inputbox"
+            required
+          /><br /><br />
+          <label>Phone Number* :</label><br />
+          <input
+            type="text"
+            maxlength="10"
+            placeholder="0757802926"
+            class="inputbox"
+            required
+          /><br /><br />
+          <label>Date Of Birth* :</label><br />
+          <input
+            type="date"
+            name="bday"
+            style="width: 150px"
+            required
+          /><br /><br />
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>Membership Details</legend>
+
+          <label>Membership Plan :</label><br />
+          <select
+            id="membership"
+            name="membership"
+            style="width: 150px"
+            required
+          >
+            <option>--select Option--</option>
+            <option value="basic">Basic</option>
+            <option value="premium">Premium</option></select
+          ><br /><br />
+          <label>Durarion :</label><br />
+          <input type="radio" value="1_month" name="duration" /><label
+            >1 Month</label
+          >
+          <input type="radio" value="3_month" name="duration" /><label
+            >3 Month</label
+          >
+          <input type="radio" value="6_month" name="duration" /><label
+            >6 Month</label
+          >
+          <input type="radio" value="12_month" name="duration" /><label
+            >12 Month</label
+          ><br /><br />
+          <label>Add-on Facilities :</label><br />
+          <input type="checkbox" value="Swimming_pool" /><label
+            >Swimming Pool</label
+          ><br />
+          <input type="checkbox" value="Sauna" /><label>Sauna</label><br />
+          <input type="checkbox" value="Personal_Trainer" /><label
+            >Personal Trainer</label
+          ><br /><br />
+          <label>Health Goals* :</label><br />
+          <textarea
+            class="inputbox"
+            style="height: 125px"
+            placeholder="Health goals are personalized objectives aimed at improving physical, mental, and emotional well-being."
+            required
+          ></textarea
+          ><br /><br />
+        </fieldset>
+        <input type="checkbox" value="agree" required /><label
+          >I agree to the gym rules and regulations *</label
+        ><br /><br />
+        <input
+          type="button"
+          value="Register"
+          style="
+            background-color: rgb(30, 176, 1);
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 8px;
+          "
+        />
+        <input
+          type="reset"
+          value="Clear Form"
+          style="
+            background-color: rgb(123, 118, 118);
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 8px;
+          "
+        />
+      </form>
+    </div>
+  </body>
+</html>
